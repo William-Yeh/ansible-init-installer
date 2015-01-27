@@ -7,7 +7,7 @@ Install applications to init system.
 
 ## Summary
 
-Role name in Ansible Galaxy: **[williamyeh.init-installer](https://galaxy.ansible.com/list#/roles/XXX)**
+Role name in Ansible Galaxy: **[williamyeh.init-installer](https://galaxy.ansible.com/list#/roles/2730)**
 
 This Ansible role has the following features:
 
