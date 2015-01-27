@@ -1,0 +1,15 @@
+- hosts: all
+  tasks:
+    - include: 'tasks/main.yml'
+  vars_files:
+    - 'defaults/main.yml'
+
+  vars:
+    init_sysv:
+      conf_template_for_app_1:
+        src: "app-1.sh.j2"
+        dest: app-1
+    init_upstart:
+      conf_template_for_app_2:
+        src: "app-2.conf.j2"
+        dest: app-2.conf
