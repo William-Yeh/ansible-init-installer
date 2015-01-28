@@ -18,8 +18,7 @@
     owner: root
     group: root
     mode:  0755
-  with_dict: init_sysv
-  when: init_sysv is defined
+  with_dict: init_sysv | default({})
 
 
 - name: copy Upstart INIT to /etc/init
@@ -30,5 +29,5 @@
     owner: root
     group: root
     mode:  0644
-  with_dict: init_upstart
-  when: init_upstart is defined and not (ansible_os_family == "RedHat" and ansible_lsb.major_release|int >= 7)
+  with_dict: init_upstart | default({})
+  when: not (ansible_os_family == "RedHat" and ansible_lsb.major_release|int >= 7)
